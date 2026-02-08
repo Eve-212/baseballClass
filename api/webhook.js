@@ -1,9 +1,9 @@
 import axios from 'axios'
 import communityImg from 'assets/community.png'
 import personalImg from 'assets/personal.png'
-
 // --- 配置區：請替換成你的實際資料 ---
-const CHANNEL_ACCESS_TOKEN = '你的_LINE_CHANNEL_ACCESS_TOKEN'
+const CHANNEL_ACCESS_TOKEN =
+  'ZnUmRYC6lGzLWlh/QwoFeJD9VZ044Oi7Gtoo6sN1IQTWH1Ad7RQfB1aQ52Zgd1+w69PlOIk6cFPkzavvrg7kCEOL1uWH4TpeJ4oFz8vFW7N+vIHNqFUPY0zcyJ8gLCg5U2qdrfvtTyBa+ATHWk9OFQdB04t89/1O/w1cDnyilFU='
 
 export default async function handler(req, res) {
   // 1. 檢查方法 (LINE Webhook 均為 POST)
