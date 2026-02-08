@@ -1,6 +1,11 @@
 import axios from 'axios'
-import communityImg from 'assets/community.png'
-import personalImg from 'assets/personal.png'
+// import communityImg from 'assets/community.png'
+// import personalImg from 'assets/personal.png'
+
+const SITE_URL = 'https://baseball-class.vercel.app'
+const communityImg = `${SITE_URL}/community.png`
+const personalImg = `${SITE_URL}/personal.png`
+
 // --- 配置區：請替換成你的實際資料 ---
 const CHANNEL_ACCESS_TOKEN =
   'ZnUmRYC6lGzLWlh/QwoFeJD9VZ044Oi7Gtoo6sN1IQTWH1Ad7RQfB1aQ52Zgd1+w69PlOIk6cFPkzavvrg7kCEOL1uWH4TpeJ4oFz8vFW7N+vIHNqFUPY0zcyJ8gLCg5U2qdrfvtTyBa+ATHWk9OFQdB04t89/1O/w1cDnyilFU='

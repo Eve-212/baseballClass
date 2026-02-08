@@ -1,15 +1,23 @@
 <template>
   <q-page class="q-pa-md">
     <div class="q-mb-md">
-      <q-btn icon="upload" label="建立MENU" @click="handleCreateRichMenu" />
+      <q-input v-model="richMenuId" label="Rich Menu ID" />
     </div>
 
     <div class="q-mb-md">
-      <q-btn icon="upload" label="上傳" @click="handleUploadRichMenuImage" />
+      <q-btn icon="star" label="取得MENU ID" @click="handleGetRichMenuId" />
     </div>
 
     <div class="q-mb-md">
-      <q-btn color="negative" icon="delete" label="刪除" @click="deleteRichMenu(richMenuId)" />
+      <q-btn icon="add" label="建立MENU" @click="handleCreateRichMenu" />
+    </div>
+
+    <div class="q-mb-md">
+      <q-btn icon="upload" label="上傳MENU照片" @click="handleUploadRichMenuImage" />
+    </div>
+
+    <div class="q-mb-md">
+      <q-btn color="negative" icon="delete" label="刪除MENU" @click="deleteRichMenu(richMenuId)" />
     </div>
   </q-page>
 </template>
@@ -17,9 +25,18 @@
 <script setup>
 import { ref } from 'vue'
 import menuImg from 'assets/menu.png'
-import { createRichMenu, deleteRichMenu, uploadRichMenuImage } from 'src/api'
+import { createRichMenu, getRichMenuId, deleteRichMenu, uploadRichMenuImage } from 'src/api'
 
-const richMenuId = ref('richmenu-e156c7bf5d6c1426bc99debae9a0d56b')
+const richMenuId = ref('')
+
+const handleGetRichMenuId = async () => {
+  try {
+    const id = await getRichMenuId()
+    richMenuId.value = id
+  } catch (error) {
+    console.error('取得失敗:', error)
+  }
+}
 
 const handleCreateRichMenu = async () => {
   try {

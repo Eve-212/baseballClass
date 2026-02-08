@@ -1,6 +1,27 @@
 import axios from 'axios'
 
-const CHANNEL_ACCESS_TOKEN = ''
+const CHANNEL_ACCESS_TOKEN =
+  'ZnUmRYC6lGzLWlh/QwoFeJD9VZ044Oi7Gtoo6sN1IQTWH1Ad7RQfB1aQ52Zgd1+w69PlOIk6cFPkzavvrg7kCEOL1uWH4TpeJ4oFz8vFW7N+vIHNqFUPY0zcyJ8gLCg5U2qdrfvtTyBa+ATHWk9OFQdB04t89/1O/w1cDnyilFU='
+
+export const getRichMenuId = async (): Promise<string | null> => {
+  try {
+    const response = await axios.get('/line-api/v2/bot/user/all/richmenu', {
+      headers: {
+        Authorization: `Bearer ${CHANNEL_ACCESS_TOKEN}`,
+      },
+    })
+    console.log('目前的預設選單 ID 是:', response.data.richMenuId)
+    return response.data.richMenuId
+  } catch (error: any) {
+    if (error.response?.status === 404) {
+      console.log('目前沒有設定任何預設選單。')
+    } else {
+      console.error('查詢失敗:', error.response?.data || error.message)
+    }
+    return null
+  }
+}
+
 export const createRichMenu = async (): Promise<string | null> => {
   const richMenuData = {
     size: {
