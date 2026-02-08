@@ -48,7 +48,7 @@ export default async function handler(req, res) {
               },
               {
                 type: 'text',
-                text: '📝想加入課程？請提供以下資訊，我們將快速幫您完成報名！：\n▪︎ 課程名稱（社區班/ 個人班）\n▪︎ 上課人數\n▪︎ 上課時間',
+                text: '📝想加入課程？請提供以下資訊，我們將協助您完成報名：\n▪︎ 課程名稱（社區班/ 個人班）\n▪︎ 上課人數\n▪︎ 上課時間',
               },
               {
                 type: 'text',
