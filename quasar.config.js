@@ -37,6 +37,13 @@ module.exports = configure(function (/* ctx */) {
         node: 'node16',
       },
 
+      extendViteConf(viteConf) {
+        viteConf.server = viteConf.server || {}
+        viteConf.server.watch = {
+          usePolling: true,
+        }
+      },
+
       vueRouterMode: 'hash', // available values: 'hash', 'history'
 
       // vitePlugins: [
@@ -51,6 +58,19 @@ module.exports = configure(function (/* ctx */) {
     // Full list of options: https://v1.quasar.dev/quasar-cli/quasar-conf-js#devServer
     devServer: {
       open: true, // opens browser window automatically
+      hot: true,
+      proxy: {
+        '/line-api': {
+          target: 'https://api.line.me',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/line-api/, ''),
+        },
+        '/line-data-api': {
+          target: 'https://api-data.line.me',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/line-data-api/, ''),
+        },
+      },
     },
 
     // https://v1.quasar.dev/quasar-cli/quasar-conf-js#framework
