@@ -39,12 +39,12 @@ export default async function handler(req, res) {
               {
                 type: 'image',
                 originalContentUrl: communityImg,
-                // previewImageUrl: PREVIEW_URL
+                previewImageUrl: communityImg,
               },
               {
                 type: 'image',
                 originalContentUrl: personalImg,
-                // previewImageUrl: PREVIEW_URL
+                previewImageUrl: personalImg,
               },
               {
                 type: 'text',
