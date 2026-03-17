@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "esnext",
+    "baseUrl": ".",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "noEmit": true,
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "paths": {
+      "src/*": ["./src/*"],
+      "app/*": ["*"],
+      "components/*": ["./src/components/*"],
+      "layouts/*": ["./src/layouts/*"],
+      "pages/*": ["./src/pages/*"],
+      "assets/*": ["./src/assets/*"],
+      "boot/*": ["./src/boot/*"],
+      "stores/*": ["./src/stores/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
