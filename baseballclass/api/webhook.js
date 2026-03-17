@@ -16,6 +16,9 @@ export default async function handler(req, res) {
     return res.status(200).send('OK')
   }
 
+  console.log(123, communityImg)
+  console.log(456, personalImg)
+
   const events = req.body.events
 
   // 如果沒有事件則直接返回
