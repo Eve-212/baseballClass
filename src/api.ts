@@ -26,35 +26,35 @@ export const createRichMenu = async (): Promise<string | null> => {
   const richMenuData = {
     size: {
       width: 2500,
-      height: 1000,
+      height: 1200,
     },
     selected: true,
     name: 'DoubleButtonMenu',
     chatBarText: '開啟選單',
     areas: [
       {
-        bounds: { x: 0, y: 0, width: 625, height: 1000 },
+        bounds: { x: 0, y: 0, width: 625, height: 1200 },
         action: {
           type: 'postback',
           data: 'community'
         }
       },
       {
-        bounds: { x: 625, y: 0, width: 625, height: 1000 },
+        bounds: { x: 625, y: 0, width: 625, height: 1200 },
         action: {
           type: 'postback',
           data: 'personal'
         }
       },
       {
-        bounds: { x: 1250, y: 0, width: 625, height: 1000 },
+        bounds: { x: 1250, y: 0, width: 625, height: 1200 },
         action: {
           type: 'postback',
           data: 'signup'
         },
       },
       {
-        bounds: { x: 1875, y: 0, width: 625, height: 1000 },
+        bounds: { x: 1875, y: 0, width: 625, height: 1200 },
         action: {
           type: 'postback',
           data: 'faq'
