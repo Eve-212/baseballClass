@@ -5,19 +5,38 @@
     </div>
 
     <div class="q-mb-md">
-      <q-btn icon="star" label="取得MENU ID" @click="handleGetRichMenuId" />
+      <q-btn color="primary" label="取當下MENU ID" @click="handleGetRichMenuId" />
     </div>
 
     <div class="q-mb-md">
-      <q-btn icon="add" label="建立MENU" @click="handleCreateRichMenu" />
+      <q-btn color="negative" label="刪MENU" @click="deleteRichMenu(richMenuId)" />
     </div>
 
     <div class="q-mb-md">
-      <q-btn icon="upload" label="上傳MENU照片" @click="handleUploadRichMenuImage" />
+      <q-btn color="teal" label="建新MENU" @click="handleCreateRichMenu" />
     </div>
 
     <div class="q-mb-md">
-      <q-btn color="negative" icon="delete" label="刪除MENU" @click="deleteRichMenu(richMenuId)" />
+      <q-btn color="purple" label="上傳新MENU" @click="handleUploadRichMenuImage" />
+    </div>
+
+    <div>
+      <div v-for="type in Object.keys(messageMap)" :key="type">
+        <div class="text-red">
+          <div v-if="type === 'community'">社區棒球</div>
+          <div v-else-if="type === 'personal'">菁鷹班</div>
+        </div>
+        <div v-for="(each, idx) in messageMap[type]" :key="idx">
+          <template v-if="each.text">
+            <div 
+              class="q-mb-sm"
+              v-html="each.text.split('\n')
+              .filter(line => line.trim())
+              .join('<br>')">
+            </div>
+          </template>
+        </div>
+      </div>
     </div>
   </q-page>
 </template>
@@ -26,6 +45,7 @@
 import { ref } from 'vue'
 import menuImg from 'assets/menu.png'
 import { createRichMenu, getRichMenuId, deleteRichMenu, uploadRichMenuImage } from 'src/api'
+import { messageMap } from '../../api/webhook'
 
 const richMenuId = ref('')
 

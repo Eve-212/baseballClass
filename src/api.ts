@@ -26,29 +26,41 @@ export const createRichMenu = async (): Promise<string | null> => {
   const richMenuData = {
     size: {
       width: 2500,
-      height: 1686,
+      height: 1000,
     },
     selected: true,
     name: 'DoubleButtonMenu',
-    chatBarText: '點我開啟選單',
+    chatBarText: '開啟選單',
     areas: [
       {
-        bounds: { x: 0, y: 0, width: 1250, height: 1686 },
+        bounds: { x: 0, y: 0, width: 625, height: 1000 },
         action: {
           type: 'postback',
-          data: 'action=program',
+          data: 'community'
+        }
+      },
+      {
+        bounds: { x: 625, y: 0, width: 625, height: 1000 },
+        action: {
+          type: 'postback',
+          data: 'personal'
+        }
+      },
+      {
+        bounds: { x: 1250, y: 0, width: 625, height: 1000 },
+        action: {
+          type: 'postback',
+          data: 'signup'
         },
       },
       {
-        bounds: { x: 1250, y: 0, width: 1250, height: 1686 },
+        bounds: { x: 1875, y: 0, width: 625, height: 1000 },
         action: {
           type: 'postback',
-          data: 'action=signup',
-          displayText:
-            '🎉太棒了！請先提供以下資訊，我們將協助完成報名：\n▪︎ 課程名稱（社區班/ 個人班）\n▪︎ 上課人數\n▪︎ 上課時間',
-        },
-      },
-    ],
+          data: 'faq'
+        }
+      }
+    ]
   }
 
   try {
