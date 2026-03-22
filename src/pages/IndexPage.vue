@@ -22,10 +22,6 @@
 
     <div>
       <div v-for="type in Object.keys(messageMap)" :key="type">
-        <div class="text-red">
-          <div v-if="type === 'community'">社區棒球</div>
-          <div v-else-if="type === 'personal'">菁鷹班</div>
-        </div>
         <div v-for="(each, idx) in messageMap[type]" :key="idx">
           <template v-if="each.text">
             <div 
