@@ -44,7 +44,7 @@ export const messageMap = {
   faq: [
     {
       type: 'text',
-      text: `❓有事無法上課怎麼辦？\n📝請主動透過LINE請假，課程皆可順延喔！`
+      text: `❓有事無法上課怎麼辦？\n👋請主動透過LINE請假，課程皆可順延喔！`
     }
   ]
 }
