@@ -26,26 +26,25 @@ export const messageMap = {
   ],
   signup: [
     {
-      type: 'template',
-      template: {
-        type: 'buttons',
-        actions: [
+      "type": "template",
+      "altText": "報名連結",
+      "template": {
+        "type": "buttons",
+        "text": "點擊下方按鈕報名",
+        "actions": [
           {
-            type: 'uri',
-            uri: 'https://docs.google.com/forms/d/e/1FAIpQLSfq6-4Eadp3oHza9J2kRTlnU6dgcugNysqVePqlYxytLpAm2g/viewform'
+            "type": "uri",
+            "label": "我要報名",
+            "uri": "https://docs.google.com/forms/d/e/1FAIpQLSfq6-4Eadp3oHza9J2kRTlnU6dgcugNysqVePqlYxytLpAm2g/viewform"
           }
         ]
       }
     }
-    // {
-    //   type: 'uri',
-    //   uri: 'https://docs.google.com/forms/d/e/1FAIpQLSfq6-4Eadp3oHza9J2kRTlnU6dgcugNysqVePqlYxytLpAm2g/viewform'
-    // }
   ],
   faq: [
     {
       type: 'text',
-      text: `❓有事無法上課，該怎麼辦？\n請主動透過 LINE 請假，課程皆可順延使用喔！`
+      text: `❓有事無法上課怎麼辦？\n📝請主動透過LINE請假，課程皆可順延喔！`
     }
   ]
 }
