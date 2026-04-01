@@ -25,27 +25,26 @@ export const messageMap = {
     // { type: 'image', originalContentUrl: personalImg, previewImageUrl: personalImg}
   ],
   signup: [
-    // {
-    //   type: 'text',
-    //   text: '更多內容，敬請期待！'
-    // }
+    {
+      type: 'uri',
+      uri: 'https://docs.google.com/forms/d/e/1FAIpQLSfq6-4Eadp3oHza9J2kRTlnU6dgcugNysqVePqlYxytLpAm2g/viewform'
+    }
   ],
   faq: [
     {
       type: 'text',
-      text: `
-        `
+      text: `\n❓有事無法上課，該怎麼辦？
+        \n請主動透過 LINE 請假，課程皆可順延使用喔！`
     }
   ]
 }
+
 // \n❓目前有哪些教練？
-//         \n▪️軟銀亞洲區球探—李杜軒教練
-//         \n▪️前職棒球星
-//         \n▪️每堂課程皆配置 1–2 位專業助理教練
-//         \n▪️並規劃每兩個月邀請日本職棒退役球星來台指導
-//         \n▪️另有前旅美投手教練洽談中，陣容持續升級，敬請期待！
-//         \n❓有事無法上課，該怎麼辦？
-//         \n請主動透過 LINE 請假，課程皆可順延使用喔！
+// \n▪️軟銀亞洲區球探—李杜軒教練
+// \n▪️前職棒球星
+// \n▪️每堂課程皆配置 1–2 位專業助理教練
+// \n▪️並規劃每兩個月邀請日本職棒退役球星來台指導
+// \n▪️另有前旅美投手教練洽談中，陣容持續升級，敬請期待！
 // \n問:需自備什麼裝備？
 // \n答:
         
