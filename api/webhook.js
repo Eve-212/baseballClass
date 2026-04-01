@@ -26,15 +26,26 @@ export const messageMap = {
   ],
   signup: [
     {
-      type: 'uri',
-      uri: 'https://docs.google.com/forms/d/e/1FAIpQLSfq6-4Eadp3oHza9J2kRTlnU6dgcugNysqVePqlYxytLpAm2g/viewform'
+      type: 'template',
+      template: {
+        type: 'buttons',
+        actions: [
+          {
+            type: 'uri',
+            uri: 'https://docs.google.com/forms/d/e/1FAIpQLSfq6-4Eadp3oHza9J2kRTlnU6dgcugNysqVePqlYxytLpAm2g/viewform'
+          }
+        ]
+      }
     }
+    // {
+    //   type: 'uri',
+    //   uri: 'https://docs.google.com/forms/d/e/1FAIpQLSfq6-4Eadp3oHza9J2kRTlnU6dgcugNysqVePqlYxytLpAm2g/viewform'
+    // }
   ],
   faq: [
     {
       type: 'text',
-      text: `\n❓有事無法上課，該怎麼辦？
-        \n請主動透過 LINE 請假，課程皆可順延使用喔！`
+      text: `❓有事無法上課，該怎麼辦？\n請主動透過 LINE 請假，課程皆可順延使用喔！`
     }
   ]
 }
